@@ -1,0 +1,35 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class SeleccionPan {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Selecciona tu tipo de pan (UwU)/");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+
+        JPanel panel = new JPanel();
+
+        JButton conchaButton = new JButton("Concha");
+        JButton panquesitoButton = new JButton("Panquesito");
+        JButton bolilloButton = new JButton("Bolillo");
+        JButton donaButton = new JButton("Donas");
+
+        conchaButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, "¡Excelente elección!"));
+        panquesitoButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, "¡Tan dulce como tú!"));
+        bolilloButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, "¡Uno para el susto!"));
+        donaButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, "¿Un cafecito o qué?"));
+
+        panel.add(conchaButton);
+        panel.add(panquesitoButton);
+        panel.add(bolilloButton);
+        panel.add(donaButton);
+
+        frame.add(panel);
+
+        frame.setVisible(true);
+    }
+}
